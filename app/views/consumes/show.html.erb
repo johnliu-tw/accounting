@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @consume.name %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @consume.cost %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @consume.kind %>
+</p>
+
+<%= link_to 'Edit', edit_account_consume_path %> |
+<%= link_to 'Back', account_path(@account) %>

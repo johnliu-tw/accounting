@@ -1,0 +1,23 @@
+<h1>New Consume</h1>
+
+<!--<%= render 'form' %>-->
+<%= form_for([@account,@consume]) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.number_field :cost %>
+  </div>
+  <div >
+   <select name = "kind">
+   	<option value="1">home</option>
+   	<option value="2">personal</option>
+   	<option value="3">food</option>
+   	<option value="4">car</option>
+   	<option value="5">shopping</option>
+</div>
+    <%= f.submit %>
+    <%end%>
+<%= link_to 'Back', account_path(@account) %>

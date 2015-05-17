@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account.name %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @account.info %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
+<%= link_to "New Consume", new_account_consume_path(@account) %>
+<h3>consumes</h3>
+<%@consumes.each do |consume| %>
+<%= link_to consume.name, account_consume_path(@account,consume)%>
+<%end%>
